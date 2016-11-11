@@ -1,5 +1,10 @@
 package org.egc;
 
+import org.junit.Before;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -34,5 +39,12 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
+    }
+    
+    @Before
+    public void before() {
+    	Gson gson = new GsonBuilder().create();
+        gson.toJson("Hello", System.out);
+        gson.toJson(123, System.out);
     }
 }
