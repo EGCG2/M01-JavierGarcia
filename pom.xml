@@ -30,9 +30,9 @@
   <build>
   	<plugins>
   		<plugin>
-		  <groupId>pmd</groupId>
-		  <artifactId>pmd</artifactId>
-		  <version>4.3</version>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-pmd-plugin</artifactId>
+		  <version>3.7</version>
 		  <executions>
 			<execution>
 				<id>pmd:pmd before mvn test</id>
@@ -44,9 +44,9 @@
 		  </executions>
 		</plugin>
 		<plugin>
-		  <groupId>jalopy</groupId>
-	   	  <artifactId>jalopy</artifactId>
-	   	  <version>1.5rc3</version>
+		  <groupId>org.codehaus.mojo</groupId>
+      		  <artifactId>jalopy-maven-plugin</artifactId>
+      		  <version>1.0-alpha-1</version>
 	   	  <executions>
 			<execution>
 				<id>jalopy:format before mvn test</id>
