@@ -1,13 +1,16 @@
 package org.egc;
 
+import org.jgrapht.UndirectedGraph;
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.SimpleGraph;
+import org.junit.Before;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-
-import org.junit.Before;
 
 /**
  * Unit test for simple App.
@@ -39,6 +42,10 @@ public class AppTest
     public void testApp(  )
     {
         assertTrue( true );
+        
+        UndirectedGraph<String, DefaultEdge> g = new SimpleGraph<String, DefaultEdge>(DefaultEdge.class);
+        
+        System.out.println(g);
     }
 
     @Before

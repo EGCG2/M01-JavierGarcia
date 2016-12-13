@@ -15,9 +15,11 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>jgrapht</groupId>
-      <artifactId>jgrapht</artifactId>
-      <version>0.7.3</version>
+      <groupId>my-jgrapht</groupId>
+        <artifactId>my-jgrapht</artifactId>
+        <version>0.0.1</version>
+    <systemPath>${basedir}/lib/my-jgrapht.jar</systemPath>
+    <scope>system</scope>
     </dependency>
     <dependency>
       <groupId>com.google.code.gson</groupId>
