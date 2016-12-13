@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.egc</groupId>
   <artifactId>demomaven01</artifactId>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>demomaven01</name>
   <url>http://maven.apache.org</url>
@@ -25,4 +25,36 @@
       <version>2.8.0</version>
 	</dependency>
   </dependencies>
+  <build>
+  	<plugins>
+  		<plugin>
+		  <groupId>pmd</groupId>
+		  <artifactId>pmd</artifactId>
+		  <version>4.3</version>
+		  <executions>
+			<execution>
+				<id>pmd:pmd before mvn test</id>
+				<phase>test</phase>
+				<goals>
+					<goal>pmd</goal>
+				</goals>
+			</execution>
+		  </executions>
+		</plugin>
+		<plugin>
+		  <groupId>jalopy</groupId>
+	   	  <artifactId>jalopy</artifactId>
+	   	  <version>1.5rc3</version>
+	   	  <executions>
+			<execution>
+				<id>jalopy:format before mvn test</id>
+				<phase>test</phase>
+				<goals>
+					<goal>format</goal>
+				</goals>
+			</execution>
+		  </executions>
+		</plugin>
+  	</plugins>
+  </build>
 </project>
